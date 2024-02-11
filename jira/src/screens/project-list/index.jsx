@@ -21,6 +21,8 @@ export const ProjectListScreen = () => {
       if (response.ok) {
         setList(await response.json())
       }
+    }).catch(error=>{
+      console.error('param err',error);
     })
   }, [param])
 
@@ -29,6 +31,8 @@ export const ProjectListScreen = () => {
       if (response.ok) {
         setUsers(await response.json())
       }
+    }).catch(error=>{
+      console.error('users err',error);
     })
   }, [])
 
